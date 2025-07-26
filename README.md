@@ -1,1 +1,1 @@
-# techUPStudy
+# 河野雄次郎

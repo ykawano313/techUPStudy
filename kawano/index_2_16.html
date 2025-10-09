@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-6課題</title>
+    <style>
+        body {
+            font-family: 'ヒラギノ角ゴ StdN', 'Hiragino Kaku Gothic StdN', 'ヒラギノ角ゴシック', 'Hiragino Sans', 'メイリオ', Meiryo, sans-serif;
+        }
+
+        .one {
+            position: relative;
+            height: 400px;
+            width: 600px;
+            left: 20px;
+            top: 20px;
+            background-color: #536DFE;
+            z-index: 10;
+        }
+
+        .two {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 300px;
+            width: 500px;
+            background-color: #C6FF00;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+        }
+
+        .three {
+            position: absolute;
+            font-size: 40px;
+            color: #616161;
+            left: 50%;
+            top: 50%;
+            height: 200px;
+            line-height: 200px;
+            width: 400px;
+            background-color: #00B8D4;
+            transform: translate(-50%, -50%);
+            z-index: 30;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="three">ロゴ表示</div>
+        </div>
+    </div>
+</body>
+
+</html>

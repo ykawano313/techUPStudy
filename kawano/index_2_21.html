@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-11課題</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 16px;
+        }
+
+        .tabs {
+            display: flex;
+            width: 100%;
+        }
+
+        .tabs label {
+            width: calc(100%/3);
+            background: #9681eb;
+            margin-right: 1px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 8px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .tabs label:last-child {
+            margin-right: 0;
+        }
+
+        #tab1:checked~.tabs .tab1 {
+            background: #6527eb;
+        }
+
+        #tab2:checked~.tabs .tab2 {
+            background: #6527eb;
+        }
+
+        #tab3:checked~.tabs .tab3 {
+            background: #6527eb;
+        }
+
+        p {
+            margin: 0;
+            padding: 16px;
+            border: 2px solid #9681eb;
+            display: none;
+        }
+
+        #tab1:checked~.contents .content1 {
+            display: block;
+        }
+
+        #tab2:checked~.contents .content2 {
+            display: block;
+        }
+
+        #tab3:checked~.contents .content3 {
+            display: block;
+        }
+
+        .tabs label:hover {
+            background: #7c6be6;
+        }
+
+        input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="radio" name="radio" id="tab1" checked />
+        <input type="radio" name="radio" id="tab2" />
+        <input type="radio" name="radio" id="tab3" />
+        <div class="tabs">
+            <label for="tab1" class="tab1">タブ１</label>
+            <label for="tab2" class="tab2">タブ2</label>
+            <label for="tab3" class="tab3">タブ3</label>
+        </div>
+        <div class="contents">
+            <p class="content1">タブパネル-1</p>
+            <p class="content2">タブパネル-2</p>
+            <p class="content3">タブパネル-3</p>
+        </div>
+    </div>
+</body>
+
+</html>

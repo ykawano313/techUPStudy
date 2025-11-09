@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-13課題</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr)
+        }
+
+        .box1 {
+            background-color: rgb(0, 0, 255);
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+
+        .box2 {
+            background-color: chartreuse;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .box3 {
+            background-color: red;
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+
+        .box4 {
+            background-color: rgb(38, 204, 255);
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .box5 {
+            background-color: white;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+
+        .box6 {
+            background-color: rgb(239, 204, 48);
+            grid-column-start: 5;
+            grid-column-end: 7;
+        }
+
+        .box7 {
+            background-color: purple;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .box8 {
+            background-color: rgb(255, 110, 228);
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+
+        .box9 {
+            background-color: rgb(106, 81, 6);
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box1">header</div>
+        <div class="box2">content-1</div>
+        <div class="box3">content-2</div>
+        <div class="box4">content-3-1</div>
+        <div class="box5">content-3-2</div>
+        <div class="box6">content-3-3</div>
+        <div class="box7">content-4-1</div>
+        <div class="box8">content-4-2</div>
+        <div class="box9">footer</div>
+    </div>
+</body>
+
+</html>

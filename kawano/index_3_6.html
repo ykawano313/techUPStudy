@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-3課題</title>
+</head>
+
+<body>
+
+    <h1>J-3. JavaScriptデータ型の扱い</h1>
+
+    <script>
+        const man = '男性';
+        const woman = '女性';
+        const m_age = 25;
+        const w_age = 22;
+        const m_name = '田中';
+        const w_name = '鈴木';
+
+        //①
+        // もし、変数manが'男性'と等しい時、変数と文字列を足して「田中は25の男性です。」と表示
+        // そうでない時は、「鈴木は22の女性です。」と表示
+        if (man === '男性') {
+            console.log(m_name + 'は' + m_age + '歳の' + man + 'です。');
+        } else {
+            console.log(w_name + 'は' + w_age + '歳の' + woman + 'です。');
+        }
+
+        //②
+        //もし変数m_ageがw_ageより大きい場合、変数と文字列を足して「田中は鈴木より年上です。」と表示
+        //そうでない時は、田中は鈴木より年下です。
+        if (m_age > w_age) {
+            console.log(m_name + 'は' + w_name + 'より年上です。');
+        } else if (m_age < w_age) {
+            console.log(m_name + 'は' + w_name + 'より年下です。');
+        }
+    </script>
+
+</body>
+
+</html>

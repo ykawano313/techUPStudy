@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>J-7. 要素の変更</h1>
+
+    <script>
+        const name_array = ['山田さん', '佐藤さん', '内田さん'];
+        console.log(name_array);
+
+        const nameA = name_array[0];
+        console.log(nameA);
+
+        const nameB = name_array[1];
+        console.log(nameB);
+
+        const nameC = name_array[2];
+        console.log(nameC);
+
+        // 山田さんを消す
+        const shiftA = name_array.shift();
+        console.log(shiftA);
+        console.log(name_array);
+
+        // 佐藤さんを消す
+        const shiftB = name_array.shift();
+        console.log(shiftB);
+        console.log(name_array);
+
+        // 内田さんを消す
+        const shiftC = name_array.shift()
+        console.log(shiftC);
+        console.log(name_array);
+
+    </script>
+
+</body>
+
+</html>

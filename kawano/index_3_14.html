@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-11課題</title>
+</head>
+
+<body>
+
+    <h1>J-11. いろんなメソッド</h1>
+
+    <script>
+
+        function timer() {
+
+            const now_time = new Date();
+
+            const hour = now_time.getHours().toString().padStart(2, '0');
+            const minute = now_time.getMinutes().toString().padStart(2, '0');
+            const second = now_time.getSeconds().toString().padStart(2, '0');
+
+            console.log(hour + ':' + minute + ':' + second);
+
+        }
+
+        setInterval(timer, 1000);
+
+    </script>
+
+</body>
+
+</html>

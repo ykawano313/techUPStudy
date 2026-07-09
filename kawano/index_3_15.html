@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-12課題</title>
+</head>
+
+<body>
+
+    <h1>J-12. メソッドやクラスを使う</h1>
+
+    <script>
+
+        function Who(name) {
+            this.name = name;
+        }
+
+        Who.prototype.getName = function () {
+            return this.name;
+        }
+
+        const person = new Who('tanaka');
+        console.log(person.getName());
+
+    </script>
+
+</body>
+
+</html>

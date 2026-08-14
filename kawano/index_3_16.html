@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-13課題</title>
+</head>
+
+<body>
+    <h1>J-13. DOM(Document Object Model)</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item">100</li>
+        <li class="list-group-item">110</li>
+        <li class="list-group-item">120</li>
+        <li class="list-group-item">130</li>
+        <li class="list-group-item">140</li>
+    </ul>
+
+    <button id="change" type="button">変更</button>
+    <button id="reset" type="button">リセット</button>
+
+    <script>
+        var listItems = document.getElementsByClassName("list-group-item");
+        var originalValues = [];
+
+        for (let i = 0; i < listItems.length; i++) {
+            originalValues.push(parseInt(listItems[i].textContent));
+        }
+
+        document.getElementById('change').addEventListener('click', function () {
+            var listItems = document.getElementsByClassName("list-group-item");
+            for (let i = 0; i < listItems.length; i++) {
+                var num = parseInt(listItems[i].textContent);
+                listItems[i].textContent = num * 10;
+            }
+        });
+
+        document.getElementById('reset').addEventListener('click', function () {
+            var listItems = document.getElementsByClassName("list-group-item");
+            for (let i = 0; i < listItems.length; i++) {
+                listItems[i].textContent = originalValues[i];
+            }
+        });
+    </script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="Ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM総合課題【Todoリスト】</title>
+</head>
+
+<body>
+    <h1>Todoアプリ</h1>
+    <div>
+        <label for="input-todo-box">Todoタスクの入力 : </label>
+        <input id="input-todo-box" type="text">
+        <button id="add-button">追加</button>
+    </div>
+
+    <h2>現在のTodoリスト</h2>
+    <ul id="todo-list"></ul>
+
+    <script>
+        function todo() {
+            let todos = [];
+            let inputTodoBox = document.getElementById('input-todo-box');
+            let addButton = document.getElementById('add-button');
+            let todoList = document.getElementById('todo-list');
+
+            addButton.addEventListener('click', (event) => {
+                let todoText = inputTodoBox.value;
+                inputTodoBox.value = '';
+                todos.push(todoText);
+                showTodos();
+            });
+
+            function showTodos() {
+                todoList.innerHTML = '';
+                todos.forEach((todo, index) => {
+                    let li = document.createElement('li');
+                    li.innerHTML = todo + ' ';
+
+                    let deleteButton = document.createElement('button');
+                    deleteButton.innerHTML = '削除'; //ボタンの間隔空けたい
+
+                    li.appendChild(deleteButton);
+                    todoList.appendChild(li);
+
+                    deleteButton.addEventListener('click', (event) => {
+                        deleteTodo(index);
+                    });
+                });
+            }
+            function deleteTodo(index) {
+                todos.splice(index, 1);
+                showTodos();
+            }
+        }
+        todo();
+    </script>
+</body>
+
+</html>

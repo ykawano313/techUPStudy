@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-17課題</title>
+</head>
+
+<body>
+    <canvas id="canv" width="300" height="300"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canv");
+        const ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(150, 150, 100, 0, Math.PI * 1.5);
+        ctx.stroke();
+
+    </script>
+
+</body>
+
+</html>

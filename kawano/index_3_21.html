@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J18課題</title>
+    <style>
+        /* #canv {
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <h1>Canvasでアニメーションを描く</h1>
+    <p>図形を表示するには、canvasタグをサポートしたブラウザが必要です。</p>
+    <canvas width="600" height="300" id="canv"></canvas>
+
+    <script>
+        var canvas = document.getElementById("canv");
+        var ctx = canvas.getContext("2d");
+
+        var img = new Image();
+        img.onload = draw;
+        img.src = "https://techup.tokyo/wp-content/uploads/2022/05/gosticon.png";
+
+        var centerX = 300;
+        var centerY = 150;
+        var radius = 100;
+        var angle = 0;
+
+        function draw() {
+            ctx.clearRect(0, 0, 600, 300);
+            var x = centerX + Math.cos(angle) * radius;
+            var y = centerY + Math.sin(angle) * radius;
+            ctx.drawImage(img, x, y, 50, 50);
+            angle = angle + 0.02;
+            requestAnimationFrame(draw);
+        }
+
+    </script>
+</body>
+
+</html>
